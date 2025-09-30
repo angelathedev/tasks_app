@@ -17,9 +17,10 @@ Deployed on [Render](https://render.com).
 
 ## Getting Started (Local)
 
-### Prerequisites
-- Ruby 3.x
-- Bundler
+### Next Steps
+- Build a simple frontend to consume the API
+- Swap in Postgres and ActiveRecord for persistence
+- Add user authentication (API keys / JWT)
 
 ### Setup
 ```bash
