@@ -1,24 +1,30 @@
-# README
+# Tasks API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A minimal **Rails API-only** app for managing tasks (in memory).  
+Endpoints support creating, toggling, deleting tasks, and viewing task stats.  
+Deployed on [Render](https://render.com).
 
-Things you may want to cover:
+---
 
-* Ruby version
+## Features
+- `GET /tasks` → list all tasks  
+- `POST /tasks` → create a new task (`{ "text": "Do the thing" }`)  
+- `PATCH /tasks/:id/toggle` → toggle task completion ✅/❌  
+- `DELETE /tasks/:id` → delete a task  
+- `GET /tasks/stats` → get counts of total/done/not done  
 
-* System dependencies
+---
 
-* Configuration
+## Getting Started (Local)
 
-* Database creation
+### Prerequisites
+- Ruby 3.x
+- Bundler
 
-* Database initialization
+### Setup
+```bash
+# install dependencies
+bundle install
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# run the server (default port 3000)
+bin/rails server
