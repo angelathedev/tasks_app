@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My Tasks</h1>
+            <div class="stats" id="stats">
+                <span class="stat">Total: <strong id="total">0</strong></span>
+                <span class="stat">Done: <strong id="done">0</strong></span>
+                <span class="stat">Todo: <strong id="notDone">0</strong></span>
+            </div>
+        </header>
+
+        <div class="add-task">
+            <input type="text" id="newTaskInput" placeholder="What needs to be done?" autofocus>
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <div class="task-list" id="taskList"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
