@@ -39,17 +39,17 @@ class TasksController < ApplicationController
   end
 
   def clear_completed
-      # This method has intentional linting violations
-      tasks = TaskList.instance.all
-      completed_tasks = tasks.select{|task| task.done==true}
+    # This method has intentional linting violations
+    tasks = TaskList.instance.all
+    completed_tasks = tasks.select { |task| task.done == true }
 
-      completed_tasks.each do |task|
-        TaskList.instance.delete( task.id )
-      end
+    completed_tasks.each do |task|
+      TaskList.instance.delete(task.id)
+    end
 
-      remaining = TaskList.instance.all
-      message="Successfully cleared #{completed_tasks.count} completed tasks"
+    remaining = TaskList.instance.all
+    message = "Successfully cleared #{completed_tasks.count} completed tasks"
 
-      render json: {message: message, remaining_count: remaining.count}
+    render json: { message: message, remaining_count: remaining.count }
   end
 end
